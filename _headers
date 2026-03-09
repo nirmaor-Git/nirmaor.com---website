@@ -1,0 +1,22 @@
+/*
+  # Prevent clickjacking
+  X-Frame-Options: DENY
+
+  # Prevent MIME-type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Referrer information sent to external sites
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Disable unnecessary browser features
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+  # Enforce HTTPS for 1 year (only active once on HTTPS — Vercel handles TLS)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Content Security Policy
+  # - unsafe-inline required: all JS and CSS is inline in the single HTML file
+  # - fonts.googleapis.com / fonts.gstatic.com: Google Fonts
+  # - data: img-src: base64-encoded images inside SVG logos
+  # - blob: img-src: generated canvas blobs (future-proofing)
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'
