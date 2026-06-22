@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description"
-content="B2B entrepreneurial strategy advisor and MBA lecturer. Product-market fit, go-to-market strategy, and startup growth in the AI era.">
+content="B2B product innovation and GTM advisor, workshop facilitator and MBA lecturer helping companies build market-entry and growth strategies in the AI era.">
 <meta name="author" content="Nir Maor">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0f2d52">
@@ -12,21 +12,22 @@ content="B2B entrepreneurial strategy advisor and MBA lecturer. Product-market f
 <link rel="alternate" hreflang="en" href="https://www.nirmaor.com/">
 <link rel="alternate" hreflang="he" href="https://www.nirmaor.com/?lang=he">
 <link rel="alternate" hreflang="x-default" href="https://www.nirmaor.com/">
-<meta property="og:title" content="Nir Maor | Entrepreneurial Strategy">
+<meta property="og:title" content="Nir Maor | B2B Product Innovation &amp; GTM Advisor">
 <meta property="og:description"
-content="B2B product innovation &amp; GTM in the AI era. 4-time startup CMO, MBA lecturer.">
+content="B2B product innovation and GTM advisory, workshops and mentoring from a 4-time startup CMO and MBA lecturer.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.nirmaor.com/">
-<meta property="og:image" content="https://www.nirmaor.com/assets/images/profile.webp">
-<meta property="og:image:width" content="1792">
-<meta property="og:image:height" content="2368">
+<meta property="og:image" content="https://www.nirmaor.com/assets/images/hero-ltr.webp">
+<meta property="og:image:width" content="1678">
+<meta property="og:image:height" content="937">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="he_IL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nir Maor | Entrepreneurial Strategy">
-<meta name="twitter:description" content="B2B product innovation &amp; GTM in the AI era.">
-<meta name="twitter:image" content="https://www.nirmaor.com/assets/images/profile.webp">
-<title>Nir Maor | Entrepreneurial Strategy Advisor &amp; MBA Lecturer</title>
+<meta name="twitter:title" content="Nir Maor | B2B Product Innovation &amp; GTM Advisor">
+<meta name="twitter:description" content="B2B product innovation and GTM advisory, workshops and mentoring in the AI era.">
+<meta name="twitter:image" content="https://www.nirmaor.com/assets/images/hero-ltr.webp">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<title>Nir Maor | B2B Product Innovation &amp; GTM Advisor</title>
 <script
 type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nir Maor","url":"https://www.nirmaor.com","sameAs":["https://www.linkedin.com/in/nirmaor/"],"jobTitle":"Entrepreneurial Strategy Advisor & MBA Lecturer","description":"B2B product innovation and GTM in the AI era. 4-time B2B startup CMO.","knowsAbout":["B2B Product Innovation","Go-to-Market Strategy","Entrepreneurial Strategy","Startup Growth","Product-Market Fit"],"email":"nir@nirmaor.com","address":{"@type":"PostalAddress","addressLocality":"Kfar Saba","addressCountry":"IL"}}</script>
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -43,8 +44,23 @@ rel="stylesheet" media="print" onload="this.media='all'">
 href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Heebo:wght@300;400;500;700&display=swap"
 rel="stylesheet">
 </noscript>
-<link rel="preload" as="image" href="assets/images/hero.webp"
-fetchpriority="high" type="image/webp">
+<script>
+(function () {
+var lang = 'en';
+try { lang = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang') || 'en'; } catch (e) { }
+if (lang === 'he') {
+document.documentElement.lang = 'he';
+document.documentElement.dir = 'rtl';
+}
+var heroPreload = document.createElement('link');
+heroPreload.rel = 'preload';
+heroPreload.as = 'image';
+heroPreload.type = 'image/webp';
+heroPreload.fetchPriority = 'high';
+heroPreload.href = lang === 'he' ? 'assets/images/hero-rtl.webp' : 'assets/images/hero-ltr.webp';
+document.head.appendChild(heroPreload);
+})();
+</script>
 <style>
 :root {
 --navy: #0f2d52;
@@ -52,6 +68,7 @@ fetchpriority="high" type="image/webp">
 --navy-pale: #e8eef5;
 --gold: #b8933e;
 --gold-light: #d4a853;
+--gold-text: #80661f;
 --off: #f8fafc;
 --text: #1a1a1a;
 --muted: #6b7280;
@@ -100,6 +117,10 @@ transition: top .2s
 }
 .skip-link:focus {
 top: 1rem
+}
+:focus-visible {
+outline: 3px solid var(--gold-text);
+outline-offset: 3px
 }
 @media(prefers-reduced-motion:reduce) {
 *,
@@ -294,12 +315,13 @@ transform: translateY(calc(var(--scroll) * 0.12px))
 content: '';
 position: absolute;
 inset: 0;
-background: url('assets/images/hero.webp') center/cover no-repeat;
+background: url('assets/images/hero-rtl.webp') center/cover no-repeat;
 z-index: -1;
 pointer-events: none
 }
 html[lang="en"] #hero::before {
-transform: scaleX(-1)
+background-image: url('assets/images/hero-ltr.webp');
+transform: none
 }
 .hero-content {
 position: relative;
@@ -323,7 +345,7 @@ font-size: 1.05rem;
 font-weight: 500;
 letter-spacing: .12em;
 text-transform: uppercase;
-color: var(--gold);
+color: var(--gold-text);
 display: block;
 margin-bottom: .6rem
 }
@@ -339,7 +361,7 @@ letter-spacing: -.02em;
 white-space: nowrap
 }
 .ht-line1 .amp {
-color: var(--gold);
+color: var(--gold-text);
 font-style: italic;
 font-weight: 400
 }
@@ -538,7 +560,7 @@ font-size: 1.05rem;
 font-weight: 500;
 text-transform: uppercase;
 letter-spacing: .15em;
-color: var(--gold);
+color: var(--gold-text);
 margin-bottom: .55rem
 }
 .s-title {
@@ -674,7 +696,7 @@ opacity: 0
 font-family: 'DM Serif Display', serif;
 font-size: 2.2rem;
 font-weight: 700;
-color: var(--gold);
+color: var(--gold-text);
 line-height: 1;
 margin-bottom: .65rem;
 position: relative;
@@ -816,32 +838,202 @@ border-radius: 2rem
 }
 .curr-grid {
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: 1fr;
+gap: 1.1rem;
+margin-top: 1rem;
+perspective: 900px
+}
+.curr-flagship {
+background: linear-gradient(135deg, rgba(15, 45, 82, .98), rgba(26, 65, 120, .94));
+color: #fff;
+border-radius: 1.15rem;
+padding: 1.5rem;
+position: relative;
+overflow: hidden;
+isolation: isolate;
+box-shadow: 0 18px 38px rgba(15, 45, 82, .18);
+transition: transform .25s var(--ease), box-shadow .25s var(--ease)
+}
+.curr-flagship::before {
+content: '';
+position: absolute;
+inset: 0;
+background: radial-gradient(circle at 14% 14%, rgba(212, 168, 83, .28), transparent 32%), linear-gradient(120deg, transparent 0 48%, rgba(255, 255, 255, .08) 48% 50%, transparent 50% 100%);
+z-index: -1;
+transition: transform .3s var(--ease), opacity .3s var(--ease)
+}
+.curr-flagship:hover,
+.curr-flagship:focus-within {
+transform: translateY(-4px);
+box-shadow: 0 24px 46px rgba(15, 45, 82, .24)
+}
+.curr-flagship:hover::before,
+.curr-flagship:focus-within::before {
+transform: scale(1.04);
+opacity: 1
+}
+.curr-kicker {
+display: inline-flex;
+align-items: center;
+gap: .45rem;
+font-size: .78rem;
+font-weight: 700;
+letter-spacing: .08em;
+text-transform: uppercase;
+color: var(--gold-light);
+margin-bottom: .65rem
+}
+.curr-kicker--bottom {
+margin-top: 1.15rem;
+margin-bottom: 0
+}
+.curr-kicker::before {
+content: '';
+width: .55rem;
+height: .55rem;
+border-radius: 50%;
+background: var(--gold-light);
+box-shadow: 0 0 0 .35rem rgba(212, 168, 83, .16)
+}
+.curr-flagship-title {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(1.65rem, 3vw, 2.35rem);
+font-weight: 400;
+line-height: 1.05;
+margin-bottom: .55rem
+}
+.curr-flagship-desc {
+max-width: 44rem;
+font-size: 1.02rem;
+line-height: 1.65;
+color: rgba(255, 255, 255, .82)
+}
+.curr-modules {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
 gap: 1rem;
-margin-top: .5rem
+position: relative
+}
+.curr-modules::before {
+content: '';
+position: absolute;
+left: 12%;
+right: 12%;
+top: -.55rem;
+height: 2px;
+background: linear-gradient(90deg, transparent, var(--gold), transparent);
+opacity: .55
 }
 .curr-card {
-background: #ffffff;
-border: 1px solid var(--border);
-border-radius: .85rem;
-padding: 1.4rem;
-transition: border-color .25s, transform .25s, box-shadow .25s
+background: linear-gradient(145deg, #fff 0%, #f8fafc 100%);
+border: 1px solid rgba(15, 45, 82, .14);
+border-radius: 1rem;
+padding: 1.35rem;
+position: relative;
+overflow: hidden;
+min-height: 210px;
+display: flex;
+flex-direction: column;
+isolation: isolate;
+transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease)
 }
-.curr-card:hover {
+.curr-card::before {
+content: '';
+position: absolute;
+inset: 0;
+background: radial-gradient(circle at 18% 16%, rgba(184, 147, 62, .18), transparent 34%), linear-gradient(135deg, rgba(15, 45, 82, .08), transparent 55%);
+opacity: .55;
+z-index: -1;
+transition: opacity .25s var(--ease), transform .25s var(--ease)
+}
+.curr-card:hover,
+.curr-card:focus-visible {
 border-color: var(--navy);
-transform: translateY(-2px);
-box-shadow: 0 4px 16px rgba(15, 45, 82, .08)
+transform: translateY(-5px) rotateX(1deg);
+box-shadow: 0 18px 34px rgba(15, 45, 82, .12);
+outline: none
+}
+.curr-card:hover::before,
+.curr-card:focus-visible::before {
+opacity: 1;
+transform: scale(1.08)
 }
 .curr-icon {
-font-size: 1.6rem;
-margin-bottom: .65rem;
-display: block
+width: 100%;
+height: 2.1rem;
+margin-bottom: 1rem;
+display: inline-flex;
+align-items: center;
+justify-content: flex-start;
+color: var(--navy);
+background: transparent;
+border: 0;
+border-radius: 0;
+box-shadow: none;
+transition: color .25s var(--ease), transform .25s var(--ease)
+}
+.curr-icon svg {
+display: none
+}
+.curr-icon::before,
+.curr-icon::after {
+content: '';
+display: block;
+height: 2px;
+border-radius: 999px;
+background: linear-gradient(90deg, var(--navy), var(--gold));
+transition: width .25s var(--ease), transform .25s var(--ease), opacity .25s var(--ease)
+}
+.curr-icon::before {
+width: 2.25rem
+}
+.curr-icon::after {
+width: .55rem;
+margin-left: .45rem;
+opacity: .55
+}
+.curr-card:hover .curr-icon,
+.curr-card:focus-visible .curr-icon {
+transform: translateX(3px)
+}
+.curr-card:hover .curr-icon::before,
+.curr-card:focus-visible .curr-icon::before {
+width: 3.2rem
+}
+.curr-card:hover .curr-icon::after,
+.curr-card:focus-visible .curr-icon::after {
+opacity: 1;
+transform: translateX(4px)
 }
 .curr-title {
 font-family: 'DM Serif Display', serif;
-font-size: 1.1rem;
+font-size: clamp(.98rem, 1vw, 1.12rem);
 color: var(--navy);
-margin-bottom: .4rem
+margin-bottom: .55rem;
+max-width: none;
+white-space: nowrap
+}
+.curr-role {
+display: inline-flex;
+align-items: center;
+align-self: flex-start;
+font-size: .76rem;
+font-weight: 700;
+letter-spacing: .06em;
+text-transform: uppercase;
+color: var(--gold-text);
+background: rgba(184, 147, 62, .1);
+border-radius: 999px;
+padding: .25rem .55rem;
+margin-bottom: .65rem
+}
+.curr-desc {
+font-size: .98rem;
+line-height: 1.55;
+color: var(--muted);
+margin-top: auto;
+position: relative;
+z-index: 1
 }
 .pane-action {
 margin-top: 1.75rem;
@@ -912,7 +1104,7 @@ padding: 7rem 6vw;
 background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%)
 }
 .testimonials-section .s-label {
-color: var(--gold)
+color: var(--gold-text)
 }
 .testimonials-section .s-title {
 color: var(--navy);
@@ -1020,6 +1212,47 @@ background: #1a4178;
 --ts: #d4a853;
 --tbl: rgba(212, 168, 83, .3)
 }
+.t-card-featured {
+background: linear-gradient(135deg, #09213f 0%, #0f2d52 52%, #1a4178 100%);
+box-shadow: inset 0 0 0 1px rgba(212, 168, 83, .26)
+}
+.t-card-featured::after {
+content: '';
+position: absolute;
+inset: 1px;
+border-radius: inherit;
+pointer-events: none;
+background: radial-gradient(circle at 82% 18%, rgba(212, 168, 83, .18), transparent 34%)
+}
+.t-card-featured .t-quote {
+font-size: 1.24rem;
+line-height: 1.72;
+font-weight: 500
+}
+.t-featured-badge {
+align-self: flex-start;
+display: inline-flex;
+align-items: center;
+gap: .45rem;
+padding: .38rem .75rem;
+border-radius: 999px;
+margin-bottom: 1.15rem;
+background: rgba(212, 168, 83, .14);
+border: 1px solid rgba(212, 168, 83, .32);
+color: #f5d78e;
+font-size: .72rem;
+font-weight: 700;
+letter-spacing: .08em;
+text-transform: uppercase
+}
+.t-featured-badge::before {
+content: '';
+width: .42rem;
+height: .42rem;
+border-radius: 50%;
+background: #d4a853;
+box-shadow: 0 0 0 5px rgba(212, 168, 83, .14)
+}
 .t-stars {
 display: flex;
 gap: .25rem;
@@ -1072,6 +1305,32 @@ color: var(--tc);
 flex-shrink: 0;
 letter-spacing: .04em
 }
+.t-logo img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: contain;
+border-radius: 0
+}
+.t-logo-company {
+width: 4.5rem;
+padding: .38rem;
+background: #fff;
+border-color: rgba(15, 45, 82, .16)
+}
+.t-wordmark {
+display: block;
+max-width: 100%;
+color: #172033;
+font-size: .7rem;
+font-weight: 800;
+line-height: 1;
+letter-spacing: 0;
+white-space: nowrap
+}
+.t-wordmark-pickey {
+font-size: .78rem
+}
 .t-name {
 font-weight: 600;
 color: var(--tc);
@@ -1105,8 +1364,8 @@ gap: 1rem;
 margin-top: 1.75rem
 }
 .c-btn {
-width: 2.5rem;
-height: 2.5rem;
+width: 2.75rem;
+height: 2.75rem;
 border-radius: 50%;
 border: 1.5px solid var(--border);
 background: #fff;
@@ -1129,17 +1388,35 @@ gap: .45rem;
 margin-left: .25rem
 }
 .c-dot {
+width: 1.5rem;
+height: 1.5rem;
+border-radius: 50%;
+background: transparent;
+cursor: pointer;
+border: none;
+position: relative
+}
+.c-dot::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
 width: .45rem;
 height: .45rem;
 border-radius: 50%;
 background: var(--border);
-cursor: pointer;
-border: none;
+transform: translate(-50%, -50%);
 transition: background .2s, transform .2s, width .3s
 }
 .c-dot.active {
+background: transparent;
+transform: none;
+width: 1.5rem;
+border-radius: 50%
+}
+.c-dot.active::before {
 background: var(--navy);
-transform: scale(1.25);
+transform: translate(-50%, -50%) scale(1.25);
 width: .9rem;
 border-radius: .45rem
 }
@@ -1310,7 +1587,10 @@ color: var(--navy);
 text-decoration: none;
 border-bottom: 2px solid var(--gold);
 padding-bottom: .15rem;
-transition: color .2s
+transition: color .2s;
+min-height: 44px;
+display: inline-flex;
+align-items: center
 }
 .contact-email:hover {
 color: var(--navy-light)
@@ -1326,10 +1606,11 @@ justify-content: center
 font-size: 1.05rem;
 color: var(--muted);
 text-decoration: none;
-display: flex;
+display: inline-flex;
 align-items: center;
 gap: .4rem;
-transition: color .2s
+transition: color .2s;
+min-height: 44px
 }
 .contact-sub a:hover {
 color: var(--navy)
@@ -1508,6 +1789,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-shrink: 0;
+width: 150px;
+box-sizing: border-box;
 padding: 0 20px
 }
 .logo-item img {
@@ -1516,7 +1799,7 @@ width: auto;
 max-width: 100px;
 object-fit: contain;
 filter: grayscale(100%) opacity(0.5);
-transition: filter .25s
+transition: filter .25s, transform .25s
 }
 .logo-item:hover img {
 filter: grayscale(0%) opacity(1)
@@ -1525,6 +1808,12 @@ filter: grayscale(0%) opacity(1)
 .logo-item.logo-lg img {
 height: 52px;
 max-width: 120px
+}
+.logo-item.logo-wide img {
+max-width: 150px
+}
+.logo-item.logo-up img {
+transform: scale(1.1)
 }
 .logo-name {
 display: none
@@ -1938,12 +2227,12 @@ gap: .3rem;
 /* Dark overlay over hero image for text legibility */
 #hero::before {
 background: linear-gradient(rgba(8, 20, 45, 0.58), rgba(8, 20, 45, 0.65)),
-url('assets/images/hero.webp') center/cover no-repeat;
+url('assets/images/hero-rtl.webp') center/cover no-repeat;
 }
 html[lang="en"] #hero::before {
 background: linear-gradient(rgba(8, 20, 45, 0.58), rgba(8, 20, 45, 0.65)),
-url('assets/images/hero.webp') center/cover no-repeat;
-transform: scaleX(-1);
+url('assets/images/hero-ltr.webp') center/cover no-repeat;
+transform: none;
 }
 /* Hero text — white for contrast on dark overlay */
 .ht-line1,
@@ -2072,6 +2361,7 @@ text-align: center;
 color: var(--muted)
 }
 .logo-item {
+width: 110px;
 padding: 0 12px
 }
 .logo-item img {
@@ -2083,6 +2373,9 @@ filter: brightness(0) opacity(0.75)
 height: 32px;
 max-width: 85px;
 filter: brightness(0) opacity(0.75)
+}
+.logo-item.logo-wide img {
+max-width: 105px
 }
 .logo-track {
 gap: 0
@@ -2250,7 +2543,7 @@ font-size: .88rem;
 font-weight: 500;
 text-transform: uppercase;
 letter-spacing: .1em;
-color: var(--gold);
+color: var(--gold-text);
 }
 .fw-card-goal-text {
 font-family: 'DM Serif Display', serif;
@@ -2336,9 +2629,21 @@ gap: .75rem
 .mentor-card {
 padding: 1rem
 }
+.curr-card {
+min-height: auto
+}
+.curr-modules {
+grid-template-columns: 1fr
+}
+.curr-flagship {
+padding: 1.25rem
+}
 .curr-title,
 .mentor-title {
 font-size: 1rem
+}
+.curr-desc {
+font-size: .95rem
 }
 .adv-body h4 {
 font-size: 1rem
@@ -2532,6 +2837,7 @@ font-family: 'Heebo', sans-serif
 [dir="rtl"] .svc-card-num,
 [dir="rtl"] .adv-dot,
 [dir="rtl"] .adv-body h4,
+[dir="rtl"] .curr-flagship-title,
 [dir="rtl"] .curr-title,
 [dir="rtl"] .mentor-title,
 [dir="rtl"] .stat-num,
@@ -2542,6 +2848,17 @@ font-family: 'Heebo', sans-serif
 [dir="rtl"] .fw-stem-circle {
 font-family: 'Heebo', sans-serif;
 font-weight: 700
+}
+[dir="rtl"] .curr-kicker,
+[dir="rtl"] .curr-role {
+font-family: 'Heebo', sans-serif;
+font-weight: 700;
+letter-spacing: 0;
+text-transform: none
+}
+[dir="rtl"] .curr-flagship-desc,
+[dir="rtl"] .curr-desc {
+font-family: 'Heebo', sans-serif
 }
 /* RTL: contact sub links — keep icon-first order (same as LTR) */
 [dir="rtl"] .contact-sub a {
@@ -2586,6 +2903,95 @@ text-align: right
 min-height: auto;
 padding-top: 6rem;
 padding-bottom: 2rem
+}
+@media(min-width:431px) {
+html[lang="en"] #hero::before {
+background: linear-gradient(90deg, rgba(255, 255, 255, .98) 0%, rgba(255, 255, 255, .94) 34%, rgba(255, 255, 255, .74) 52%, rgba(255, 255, 255, .2) 69%, rgba(255, 255, 255, 0) 78%),
+url('assets/images/hero-ltr.webp') center/cover no-repeat
+}
+html[lang="en"] .hero-content {
+max-width: 760px;
+margin-left: 0;
+margin-right: auto
+}
+html[lang="en"] .ht-line1 {
+font-size: clamp(2.25rem, 3.6vw, 3.6rem);
+line-height: 1.08;
+color: var(--navy);
+text-shadow: 0 1px 0 rgba(255, 255, 255, .7)
+}
+html[lang="en"] .ht-in-the {
+font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+color: #4b5563;
+text-shadow: none
+}
+html[lang="en"] .ht-ai-era {
+font-size: clamp(2.5rem, 4vw, 3.8rem);
+color: var(--navy-light);
+text-shadow: 0 1px 0 rgba(255, 255, 255, .7)
+}
+html[lang="en"] .hero-creds {
+max-width: 680px
+}
+html[lang="en"] .cred-item {
+color: #334155;
+font-weight: 500;
+line-height: 1.55;
+text-shadow: none
+}
+html[lang="en"] #hero .btn-ghost {
+color: var(--navy);
+border-color: rgba(15, 45, 82, .3)
+}
+html[lang="en"] #hero .btn-ghost:hover {
+color: #fff;
+border-color: var(--navy);
+background: var(--navy)
+}
+[dir="rtl"] #hero::before {
+background: linear-gradient(270deg, rgba(255, 255, 255, .98) 0%, rgba(255, 255, 255, .94) 34%, rgba(255, 255, 255, .74) 52%, rgba(255, 255, 255, .2) 69%, rgba(255, 255, 255, 0) 78%),
+url('assets/images/hero-rtl.webp') center/cover no-repeat
+}
+[dir="rtl"] .hero-content {
+max-width: 760px;
+margin-right: 0;
+margin-left: auto
+}
+[dir="rtl"] .ht-line1 {
+font-size: clamp(2.25rem, 3.6vw, 3.6rem);
+line-height: 1.08;
+color: var(--navy);
+white-space: normal;
+text-shadow: 0 1px 0 rgba(255, 255, 255, .7)
+}
+[dir="rtl"] .ht-in-the {
+font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+color: #4b5563;
+text-shadow: none
+}
+[dir="rtl"] .ht-ai-era {
+font-size: clamp(2.5rem, 4vw, 3.8rem);
+color: var(--navy-light);
+text-shadow: 0 1px 0 rgba(255, 255, 255, .7)
+}
+[dir="rtl"] .hero-creds {
+max-width: 680px
+}
+[dir="rtl"] .cred-item {
+color: #334155;
+font-weight: 500;
+line-height: 1.55;
+text-shadow: none
+}
+[dir="rtl"] #hero .btn-ghost {
+color: var(--navy);
+border-color: rgba(15, 45, 82, .3)
+}
+[dir="rtl"] #hero .btn-ghost:hover {
+color: #fff;
+border-color: var(--navy);
+background: var(--navy)
+}
 }
 /* About grid: auto-reverses */
 [dir="rtl"] .about-content p {
@@ -2663,6 +3069,13 @@ right: -1rem
 [dir="rtl"] .curr-card,
 [dir="rtl"] .mentor-card {
 text-align: right
+}
+[dir="rtl"] .curr-kicker,
+[dir="rtl"] .curr-role {
+direction: rtl
+}
+[dir="rtl"] .curr-title {
+max-width: none
 }
 /* Adv body text */
 [dir="rtl"] .adv-body {
@@ -2868,7 +3281,7 @@ color: var(--muted);
 font-weight: 400
 }
 html[lang="he"] .ls-he {
-color: var(--gold);
+color: var(--gold-text);
 font-weight: 700
 }
 /* Drawer is light, keep lang-switch in navy palette */
@@ -2886,6 +3299,239 @@ background: var(--border)
 }
 .nav-links.is-open .ls-thumb {
 background: var(--navy)
+}
+/* ── COMPACT NAVIGATION — phones and tablets ── */
+@media(max-width:900px) {
+nav {
+min-height: 68px;
+padding: .75rem 5vw
+}
+.nav-logo {
+font-size: 1.35rem;
+line-height: 1;
+white-space: nowrap;
+flex-shrink: 0;
+min-height: 44px;
+display: inline-flex;
+align-items: center
+}
+.nav-hamburger {
+display: flex;
+width: 44px;
+height: 44px;
+min-width: 44px;
+min-height: 44px;
+padding: 0;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 5px;
+z-index: 10001
+}
+.nav-hamburger span {
+width: 24px;
+height: 2px;
+flex: 0 0 2px
+}
+nav.nav-open .nav-hamburger {
+gap: 5px
+}
+nav.nav-open .nav-hamburger span:nth-child(1) {
+transform: translateY(7px) rotate(45deg)
+}
+nav.nav-open .nav-hamburger span:nth-child(3) {
+transform: translateY(-7px) rotate(-45deg)
+}
+#nav-backdrop {
+display: block;
+position: fixed;
+inset: 0;
+background: rgba(15, 45, 82, .38);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+z-index: 50;
+opacity: 0;
+visibility: hidden;
+transition: opacity .35s var(--ease), visibility .35s;
+pointer-events: none
+}
+#nav-backdrop.is-open {
+opacity: 1;
+visibility: visible;
+pointer-events: auto
+}
+.nav-links {
+display: flex;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+width: 84vw;
+max-width: 340px;
+margin: 0;
+padding: max(env(safe-area-inset-top, 0px), 4.5rem) 1.5rem 1.5rem;
+background: rgba(255, 255, 255, .98);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-start;
+gap: 0;
+z-index: 9999;
+transform: translateX(105%);
+visibility: hidden;
+opacity: 0;
+transition: transform .35s var(--ease), visibility .35s, opacity .35s;
+pointer-events: none;
+box-shadow: -8px 0 48px rgba(15, 45, 82, .18);
+border-left: 1px solid rgba(15, 45, 82, .08);
+overflow-y: auto
+}
+.nav-links.is-open {
+transform: translateX(0);
+visibility: visible;
+opacity: 1;
+pointer-events: auto
+}
+.nav-links li {
+width: 100%
+}
+.nav-links a {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+min-height: 54px;
+padding: .75rem 0;
+border-bottom: 1px solid rgba(15, 45, 82, .08);
+color: var(--navy);
+font-size: 1.05rem;
+font-weight: 500;
+letter-spacing: 0;
+text-transform: none;
+text-align: center
+}
+.nav-cta {
+width: 100%;
+min-height: 50px;
+margin-top: 1rem;
+padding: .75rem 1.5rem !important;
+border-bottom: 0 !important;
+border-radius: 2rem
+}
+.lang-switcher {
+display: none
+}
+.lang-switcher-mobile {
+display: flex;
+order: 10;
+justify-content: center;
+margin: auto 0 0;
+padding: 1.25rem 0 0;
+border-top: 1px solid rgba(15, 45, 82, .1);
+border-bottom: 0
+}
+}
+@media(max-width:430px) {
+.c-dots {
+display: none
+}
+.nav-links {
+width: 74vw;
+max-width: 320px
+}
+#hero {
+padding: calc(258px + 1.35rem) 5vw 1.25rem;
+background: #fff;
+gap: 0
+}
+[dir="rtl"] #hero {
+padding: calc(258px + 1.35rem) 5vw 1.25rem
+}
+#hero .mesh-bg,
+#hero .blob {
+display: none
+}
+#hero::before {
+inset: 68px 0 auto;
+height: 190px;
+z-index: 0
+}
+html[lang="en"] #hero::before {
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 68%, #fff 100%),
+url('assets/images/hero-ltr.webp') center/cover no-repeat
+}
+[dir="rtl"] #hero::before {
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 68%, #fff 100%),
+url('assets/images/hero-rtl.webp') center/cover no-repeat
+}
+.hero-content {
+max-width: 360px;
+margin-inline: auto;
+color: var(--navy)
+}
+.hero-title-block {
+margin-bottom: .45rem
+}
+.ht-line1,
+.ht-ai-era {
+color: var(--navy-light)
+}
+.ht-in-the {
+color: #4b5563
+}
+html[lang="en"] .ht-line1 {
+font-size: clamp(1.65rem, 6.8vw, 1.9rem);
+line-height: 1.06
+}
+.hero-creds {
+gap: .45rem;
+margin-top: 1rem
+}
+.cred-item {
+font-size: .94rem;
+line-height: 1.5;
+max-width: 350px;
+color: #334155
+}
+.cred-dot {
+background: var(--gold)
+}
+.hero-actions {
+gap: .55rem;
+margin-top: .45rem
+}
+.btn-primary,
+.btn-ghost {
+min-height: 50px
+}
+.btn-ghost {
+background: transparent;
+border-color: rgba(15, 45, 82, .35);
+color: var(--navy)
+}
+.btn-ghost:hover {
+background: var(--navy);
+border-color: var(--navy);
+color: #fff
+}
+.hero-clients {
+width: calc(100% + 10vw);
+margin: .75rem -5vw 0 !important;
+padding: .65rem 0 .75rem;
+background: #f6f8fb;
+border-top: 1px solid rgba(15, 45, 82, .08);
+border-bottom: 1px solid rgba(15, 45, 82, .08)
+}
+[dir="rtl"] .hero-clients {
+margin: .75rem -5vw 0 !important;
+padding: .65rem 0 .75rem
+}
+.clients-label {
+font-size: .76rem;
+margin-bottom: .3rem;
+letter-spacing: .1em
+}
 }
 @media(prefers-reduced-motion:reduce) {
 .ls-thumb {
@@ -2998,8 +3644,8 @@ left: 1rem
 <div id="nav-backdrop" aria-hidden="true"></div>
 <a class="skip-link" href="#hero">Skip to main content</a>
 <nav id="mainNav" role="navigation" aria-label="Main navigation">
-<span class="nav-logo">Nir Maor</span>
-<button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+<a class="nav-logo" href="#hero" aria-label="Nir Maor — home">Nir Maor</a>
+<button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
 <span></span>
 <span></span>
 <span></span>
@@ -3046,8 +3692,6 @@ class="amp">&amp;</span> GTM</span>
 data-i18n="hero.aiEra">AI era</span></span>
 </h1>
 </div>
-<p class="hero-sub" data-i18n-html="hero.sub">I help B2B entrepreneurs and companies go from ideas to products —
-targeting the right challenge at the right time, and building go-to-market strategies that generate sales.</p>
 <div class="hero-creds">
 <div class="cred-item"><span class="cred-dot" aria-hidden="true"></span><span data-i18n="hero.cred1">4-time B2B startup CMO, including at unicorns and acquisitions.</span></div>
 <div class="cred-item"><span class="cred-dot" aria-hidden="true"></span><span data-i18n="hero.cred2">I teach an MBA-level course on entrepreneurial strategy with a focus on product innovation and B2B market entry.</span></div>
@@ -3065,44 +3709,46 @@ talk</a>
 <p class="clients-label" data-i18n="hero.trustedBy">Trusted by</p>
 <div class="logo-track-wrap">
 <div class="logo-track" id="logoTrack">
-<div class="logo-item logo-lg"><img src="assets/logos/1.svg" alt="ServiceNow" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/2.svg" alt="Lightricks" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/3.svg" alt="SolarEdge" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/4.svg" alt="Siemens" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/5.svg" alt="PayPal" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/6.svg" alt="Zesty" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/7.svg" alt="Skai" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/8_clean.webp" alt="Cato Networks" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/9.svg" alt="Cognyte" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/10.svg" alt="Pentera" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/11.svg" alt="Taboola" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/12_clean.webp" alt="Quiklizard" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/13.svg" alt="Outbrain" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/14.svg" alt="Kaltura" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/15.svg" alt="Stratasys" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/16_clean.svg" alt="Kornit" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/17.svg" alt="HP" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/18.svg" alt="Earnix" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/19.svg" alt="Claroty" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/1.svg" alt="ServiceNow" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/2.svg" alt="Lightricks" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/3.svg" alt="SolarEdge" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/4.svg" alt="Siemens" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/5.svg" alt="PayPal" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/6.svg" alt="Zesty" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/7.svg" alt="Skai" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/8_clean.webp" alt="Cato Networks" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/9.svg" alt="Cognyte" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/10.svg" alt="Pentera" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/11.svg" alt="Taboola" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/12_clean.webp" alt="Quiklizard" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/13.svg" alt="Outbrain" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/14.svg" alt="Kaltura" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/15.svg" alt="Stratasys" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/16_clean.svg" alt="Kornit" loading="lazy"></div>
-<div class="logo-item logo-lg"><img src="assets/logos/17.svg" alt="HP" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/18.svg" alt="Earnix" loading="lazy"></div>
-<div class="logo-item"><img src="assets/logos/19.svg" alt="Claroty" loading="lazy"></div>
+<div class="logo-item logo-lg"><img src="assets/logos/1.svg" alt="ServiceNow" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/2.svg" alt="Lightricks" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-wide"><img src="assets/logos/onelayer.webp" alt="OneLayer" width="321" height="180" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/3.svg" alt="SolarEdge" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/4.svg" alt="Siemens" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/5.svg" alt="PayPal" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/6.svg" alt="Zesty" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/7.svg" alt="Skai" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg"><img src="assets/logos/8_clean.webp" alt="Cato Networks" width="450" height="250" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/9.svg" alt="Cognyte" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/10.svg" alt="Pentera" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/11.svg" alt="Taboola" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/12_clean.webp" alt="Quiklizard" width="820" height="144" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/13.svg" alt="Outbrain" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/14.svg" alt="Kaltura" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/15.svg" alt="Stratasys" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/16_clean.svg" alt="Kornit" width="240" height="72" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/17.svg" alt="HP" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/18.svg" alt="Earnix" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/19.svg" alt="Claroty" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg"><img src="assets/logos/1.svg" alt="ServiceNow" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/2.svg" alt="Lightricks" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-wide"><img src="assets/logos/onelayer.webp" alt="OneLayer" width="321" height="180" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/3.svg" alt="SolarEdge" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/4.svg" alt="Siemens" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/5.svg" alt="PayPal" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/6.svg" alt="Zesty" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/7.svg" alt="Skai" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg"><img src="assets/logos/8_clean.webp" alt="Cato Networks" width="450" height="250" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/9.svg" alt="Cognyte" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/10.svg" alt="Pentera" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/11.svg" alt="Taboola" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/12_clean.webp" alt="Quiklizard" width="820" height="144" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/13.svg" alt="Outbrain" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/14.svg" alt="Kaltura" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-up"><img src="assets/logos/15.svg" alt="Stratasys" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/16_clean.svg" alt="Kornit" width="240" height="72" loading="eager" decoding="async"></div>
+<div class="logo-item logo-lg logo-up"><img src="assets/logos/17.svg" alt="HP" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/18.svg" alt="Earnix" width="200" height="60" loading="eager" decoding="async"></div>
+<div class="logo-item"><img src="assets/logos/19.svg" alt="Claroty" width="200" height="60" loading="eager" decoding="async"></div>
 </div>
 </div>
 </div>
@@ -3327,7 +3973,7 @@ to your stage and goals.</p>
 <div class="svc-header-img" aria-label="Profile photo">
 <div class="svc-circle-img">
 <img src="assets/images/services.webp"
-alt="Nir Maor — strategy advisor" width="400" height="400" loading="lazy" decoding="async">
+alt="Nir Maor — strategy advisor" width="2048" height="2048" loading="lazy" decoding="async">
 </div>
 </div>
 </div>
@@ -3347,8 +3993,8 @@ stroke-width="2.5" viewBox="0 0 24 24">
 onclick="openSvc('B')">
 <div class="svc-card-num" aria-hidden="true">02</div>
 <div class="svc-card-title" data-i18n="svc.cardB.title">Workshops & Lectures</div>
-<p class="svc-card-desc" data-i18n="svc.cardB.desc">MBA-level curriculum and custom workshops for B2B sales,
-marketing, product, and CS leaders seeking strategic clarity.</p>
+<p class="svc-card-desc" data-i18n="svc.cardB.desc">MBA-level customized workshops on entrepreneurship,
+product innovation, and GTM in the AI era.</p>
 <div class="svc-card-arrow" aria-hidden="true"><svg width="14" height="14" fill="none" stroke="#0f2d52"
 stroke-width="2.5" viewBox="0 0 24 24">
 <polyline points="6 9 12 15 18 9" />
@@ -3418,10 +4064,15 @@ data-i18n="svc.paneA.tag3c">AI integration</span></div>
 </div>
 <div class="svc-pane" id="paneB">
 <p class="pane-title" data-i18n="svc.paneB.title">Academic Authority & Corporate Training</p>
-<p class="pane-intro" data-i18n="svc.paneB.intro">MBA-level course modules and custom corporate workshops —
-the same frameworks I teach at university, applied to your business challenges.</p>
 <div class="curr-grid">
-<div class="curr-card">
+<div class="curr-flagship">
+<div class="curr-flagship-title" data-i18n="svc.paneB.flagship.title">Entrepreneurial Strategy</div>
+<p class="curr-flagship-desc" data-i18n="svc.paneB.flagship.desc">A complete MBA-level workshop for founders
+and leadership teams building product, market, and GTM clarity in the AI era.</p>
+<div class="curr-kicker curr-kicker--bottom" data-i18n="svc.paneB.flagship.kicker">20-30 hour customized workshop</div>
+</div>
+<div class="curr-modules">
+<div class="curr-card" tabindex="0">
 <span class="curr-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="36"
 height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
 stroke-linecap="round" stroke-linejoin="round">
@@ -3430,18 +4081,12 @@ stroke-linecap="round" stroke-linejoin="round">
 d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
 <line x1="2" y1="12" x2="22" y2="12" />
 </svg></span>
-<div class="curr-title" data-i18n="svc.paneB.curr1.title">B2B Market Entry Strategies</div>
-</div>
-<div class="curr-card">
-<span class="curr-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="36"
-height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-stroke-linecap="round" stroke-linejoin="round">
-<rect x="9" y="9" width="6" height="6" rx="1" />
-<path d="M9 9V6m6 3V6m-6 9v3m6-3v3M6 9H3m3 6H3m15-6h3m-3 6h3" />
-</svg></span>
+<div class="curr-role" data-i18n="svc.paneB.moduleLabel">Module</div>
 <div class="curr-title" data-i18n="svc.paneB.curr2.title">AI-Powered Product Innovation</div>
+<p class="curr-desc" data-i18n="svc.paneB.curr2.desc">Turn AI from a buzzword into a practical product
+discovery, experimentation, and roadmap acceleration engine.</p>
 </div>
-<div class="curr-card">
+<div class="curr-card" tabindex="0">
 <span class="curr-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="36"
 height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
 stroke-linecap="round" stroke-linejoin="round">
@@ -3449,7 +4094,10 @@ stroke-linecap="round" stroke-linejoin="round">
 d="M12 2C8.7 2 6 4.7 6 8c0 2.2 1.1 4.2 2.8 5.4.7.5 1.2 1.3 1.2 2.1V16a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.5c0-.8.5-1.6 1.2-2.1C16.9 12.2 18 10.2 18 8c0-3.3-2.7-6-6-6z" />
 <line x1="9" y1="21" x2="15" y2="21" />
 </svg></span>
-<div class="curr-title" data-i18n="svc.paneB.curr3.title">The Entrepreneurial Mindset for Executives
+<div class="curr-role" data-i18n="svc.paneB.moduleLabel">Module</div>
+<div class="curr-title" data-i18n="svc.paneB.curr3.title">AI in GTM</div>
+<p class="curr-desc" data-i18n="svc.paneB.curr3.desc">Map where AI can sharpen positioning,
+segmentation, content, sales workflows, and growth decisions.</p>
 </div>
 </div>
 </div>
@@ -3497,6 +4145,25 @@ session</span>
 <h2 class="s-title" data-i18n="rep.title">What people say</h2>
 <div class="carousel-wrap" role="region" aria-label="Testimonials carousel" aria-live="polite">
 <div class="carousel-track" id="carouselTrack">
+<div class="t-card t-card-featured">
+<div class="t-featured-badge" data-i18n="tFeatured">Featured workshop result</div>
+<div class="t-stars" aria-label="5 out of 5 stars"><span class="t-star">★</span><span
+class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span
+class="t-star">★</span></div>
+<p class="t-quote" data-i18n="t0">Nir ran a four-part AI workshop for my marketing team and he hit it out of
+the park. No hype, no generic AI 101. He got specific about how each function of the team could use AI in
+their actual workflows. My team left with tools they could use that day, not just inspiration.</p>
+<div class="t-author">
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/onelayer.webp" alt="" width="321" height="180"></div>
+<div>
+<div class="t-name">Eddie Baron</div>
+<div class="t-role">VP Growth Marketing &amp; GTM Operations · OneLayer</div>
+</div>
+</div>
+<div class="t-progress">
+<div class="t-progress-fill" style="width:10%"></div>
+</div>
+</div>
 <div class="t-card">
 <div class="t-stars" aria-label="5 out of 5 stars"><span class="t-star">★</span><span
 class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span
@@ -3504,7 +4171,7 @@ class="t-star">★</span></div>
 <p class="t-quote" data-i18n="t1">Nir's expertise significantly enhanced my sales skills and helped overcome
 numerous sales challenges. Outstanding support!</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">OB</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/13.svg" alt="" width="200" height="60"></div>
 <div>
 <div class="t-name">Aviran Safar</div>
 <div class="t-role">Sales Manager · Outbrain</div>
@@ -3522,7 +4189,7 @@ class="t-star">★</span></div>
 time to understand my role, and shared relatable real-world examples. His thought-provoking insights
 challenged me to view scenarios from new perspectives.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">LT</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/2.svg" alt="" width="200" height="60"></div>
 <div>
 <div class="t-name">Gal Manoach</div>
 <div class="t-role">Product Marketing Manager · Lightricks</div>
@@ -3540,7 +4207,7 @@ class="t-star">★</span></div>
 developing, and executing a GTM plan profoundly impacted my role. Nir's expertise simplified complex
 strategies into clear, actionable steps.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">SK</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/7.svg" alt="" width="200" height="60"></div>
 <div>
 <div class="t-name">Shahar Remets</div>
 <div class="t-role">Director of Product · Skai</div>
@@ -3557,7 +4224,7 @@ class="t-star">★</span></div>
 <p class="t-quote" data-i18n="t4">Nir's SaaS marketing skills were instrumental in the growth of Earnix into a
 unicorn.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">EX</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/18.svg" alt="" width="200" height="60"></div>
 <div>
 <div class="t-name">Udi Ziv</div>
 <div class="t-role">Former CEO · Earnix</div>
@@ -3575,7 +4242,7 @@ class="t-star">★</span></div>
 simplified the intricacies of B2B marketing, emphasizing simplicity, innovation, and technology optimization
 for exceptional results.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">PP</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/5.svg" alt="" width="200" height="60"></div>
 <div>
 <div class="t-name">Alex Zakharova</div>
 <div class="t-role">Head of Consumer Credit UK/DACH · PayPal</div>
@@ -3592,7 +4259,7 @@ class="t-star">★</span></div>
 <p class="t-quote" data-i18n="t6">Nir's invaluable expertise and guidance were pivotal in crafting a winning
 marketing strategy for our expansion into new markets.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">CG</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/9.svg" alt="" width="200" height="60"></div>
 <div>
 <div class="t-name">Alon Shamir</div>
 <div class="t-role">Sr. Director of Marketing · Cognyte</div>
@@ -3610,7 +4277,7 @@ class="t-star">★</span></div>
 outside the box. He came up with so many innovative ideas that helped me take my Customer Marketing strategy
 to the next level.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">ME</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/mend.svg" alt="" width="1013" height="340"></div>
 <div>
 <div class="t-name">Na'ama Chen-Nir</div>
 <div class="t-role">Head of Customer Marketing · Mend</div>
@@ -3627,7 +4294,7 @@ class="t-star">★</span></div>
 <p class="t-quote" data-i18n="t8">Nir was an asset in defining our market positioning and messaging at
 InsidePacket. His understanding of go-to-market is an asset for any B2B tech company.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">IP</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><img src="assets/logos/insidepacket.webp" alt="" width="116" height="135"></div>
 <div>
 <div class="t-name">Eli Karpilovski</div>
 <div class="t-role">Founder &amp; CEO · InsidePacket</div>
@@ -3644,7 +4311,7 @@ class="t-star">★</span></div>
 <p class="t-quote" data-i18n="t9">Nir is a phenomenal B2B go-to-market strategist. I turn to his creativity
 and strategic thinking at every major intersection in our company's journey of growth.</p>
 <div class="t-author">
-<div class="t-logo" aria-hidden="true">PK</div>
+<div class="t-logo t-logo-company" aria-hidden="true"><span class="t-wordmark t-wordmark-pickey">Pickey</span></div>
 <div>
 <div class="t-name">Omer Shmueli</div>
 <div class="t-role">Former CEO · Pickey</div>
@@ -3674,8 +4341,8 @@ stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <div class="glass-frame">
 <img id="aboutImg" data-src="assets/images/profile.webp"
 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 4'%3E%3C/svg%3E"
-alt="Nir Maor — B2B entrepreneurial strategy advisor, MBA lecturer and 4-time startup CMO" width="400"
-height="711" loading="lazy" decoding="async" />
+alt="Nir Maor — B2B entrepreneurial strategy advisor, MBA lecturer and 4-time startup CMO" width="1792"
+height="2368" loading="lazy" decoding="async" />
 </div>
 <div class="glass-badge" data-i18n="about.badge">📍 Kfar Saba · Available globally</div>
 <div class="about-deco-1" aria-hidden="true"></div>
@@ -3777,6 +4444,22 @@ link.addEventListener('click', closeMenu);
 });
 /* Tap backdrop to close drawer */
 if (backdrop) backdrop.addEventListener('click', closeMenu);
+/* Keep social proof above the credentials on phones only. */
+var mobileHero = document.getElementById('hero');
+var mobileHeroContent = mobileHero.querySelector('.hero-content');
+var mobileHeroTitle = mobileHero.querySelector('.hero-title-block');
+var mobileHeroClients = mobileHero.querySelector('.hero-clients');
+var mobileHeroQuery = window.matchMedia('(max-width:430px)');
+function placeHeroClients() {
+if (mobileHeroQuery.matches) {
+mobileHeroTitle.insertAdjacentElement('afterend', mobileHeroClients);
+} else if (mobileHeroClients.parentElement !== mobileHero) {
+mobileHero.appendChild(mobileHeroClients);
+}
+}
+placeHeroClients();
+if (mobileHeroQuery.addEventListener) mobileHeroQuery.addEventListener('change', placeHeroClients);
+else mobileHeroQuery.addListener(placeHeroClients);
 /* ── SECTION REVEAL ── */
 var sObs = new IntersectionObserver(function (e) { e.forEach(function (x) { if (x.isIntersecting) x.target.classList.add('visible'); }); }, { threshold: .07 });
 document.querySelectorAll('.section').forEach(function (s) { sObs.observe(s); });
@@ -3858,6 +4541,7 @@ window.openSvc(id);
 /* ── CAROUSEL ── */
 var cur = 0, autoT, track = document.getElementById('carouselTrack');
 var tCards = track.querySelectorAll('.t-card'), dotsWrap = document.getElementById('cDots');
+var standardDelay = 5500;
 tCards.forEach(function (_, i) {
 var d = document.createElement('button');
 d.className = 'c-dot' + (i === 0 ? ' active' : '');
@@ -3865,8 +4549,13 @@ d.setAttribute('aria-label', 'Testimonial ' + (i + 1));
 d.onclick = function () { goTo(i); };
 dotsWrap.appendChild(d);
 });
+function scheduleCarousel() {
+clearTimeout(autoT);
+if (cur === 0) return;
+autoT = setTimeout(function () { goTo((cur + 1) % tCards.length); }, standardDelay);
+}
 function goTo(n) {
-cur = Math.max(0, Math.min(n, tCards.length - 1));
+cur = ((n % tCards.length) + tCards.length) % tCards.length;
 var rtl = document.documentElement.dir === 'rtl';
 track.style.transform = 'translateX(' + (rtl ? '' : '-') + (cur * 100) + '%)';
 document.querySelectorAll('.c-dot').forEach(function (d, i) { d.classList.toggle('active', i === cur); });
@@ -3874,15 +4563,10 @@ tCards.forEach(function (card, i) {
 var fill = card.querySelector('.t-progress-fill');
 if (fill) fill.style.width = (i === cur ? ((cur + 1) / tCards.length * 100) + '%' : '0%');
 });
-clearInterval(autoT);
-autoT = setInterval(function () { goTo((cur + 1) % tCards.length); }, 5500);
+scheduleCarousel();
 }
 window.moveCarousel = function (dir) { goTo(cur + dir); };
 goTo(0);
-/* Start autoplay when browser is idle to avoid blocking LCP */
-(window.requestIdleCallback || function (cb) { setTimeout(cb, 200); })(function () {
-autoT = setInterval(function () { goTo((cur + 1) % tCards.length); }, 5500);
-});
 /* ── LANGUAGE SWITCHER ── */
 var currentLang = 'en';
 var TRANSLATIONS = {
@@ -3949,7 +4633,7 @@ en: {
 'svc.cardA.title': 'Deep Advisory',
 'svc.cardA.desc': 'A 3-phase engagement that diagnoses your GTM gaps, runs cross-functional workshops, and trains your team to execute with clarity.',
 'svc.cardB.title': 'Workshops & Lectures',
-'svc.cardB.desc': 'MBA-level curriculum and custom workshops for B2B sales, marketing, product, and CS leaders seeking strategic clarity.',
+'svc.cardB.desc': 'MBA-level customized workshops on entrepreneurship, product innovation, and GTM in the AI era.',
 'svc.cardC.title': 'Mentoring',
 'svc.cardC.desc': 'Personalized coaching and fractional leadership for founders, CMOs, and growth teams who want a thought partner, not a consultant.',
 'svc.paneA.title': 'The 3-Phase Project',
@@ -3976,10 +4660,15 @@ en: {
 'svc.paneA.tag3b': 'Growth loops',
 'svc.paneA.tag3c': 'AI integration',
 'svc.paneB.title': 'Academic Authority & Corporate Training',
-'svc.paneB.intro': 'MBA-level course modules and custom corporate workshops \u2014 the same frameworks I teach at university, applied to your business challenges.',
-'svc.paneB.curr1.title': 'B2B Market Entry Strategies',
+'svc.paneB.intro': 'MBA-level customized workshops on entrepreneurship, product innovation, and GTM in the AI era.',
+'svc.paneB.flagship.kicker': '20-30 hour customized workshop',
+'svc.paneB.flagship.title': 'Entrepreneurial Strategy',
+'svc.paneB.flagship.desc': 'A complete MBA-level workshop for founders and leadership teams building product, market, and GTM clarity in the AI era.',
+'svc.paneB.moduleLabel': 'Module',
 'svc.paneB.curr2.title': 'AI-Powered Product Innovation',
-'svc.paneB.curr3.title': 'The Entrepreneurial Mindset for Executives',
+'svc.paneB.curr2.desc': 'Turn AI from a buzzword into a practical product discovery, experimentation, and roadmap acceleration engine.',
+'svc.paneB.curr3.title': 'AI in GTM',
+'svc.paneB.curr3.desc': 'Map where AI can sharpen positioning, segmentation, content, sales workflows, and growth decisions.',
 'svc.paneA.cta': 'Explore Options',
 'svc.paneB.cta': 'Details & pricing',
 'svc.paneB.ctaSub': 'Request the full curriculum PDF',
@@ -3991,6 +4680,8 @@ en: {
 'svc.paneC.ctaSub': 'Free 30-min intro session',
 'rep.label': 'Reputation',
 'rep.title': 'What people say',
+'tFeatured': 'Featured workshop result',
+'t0': 'Nir ran a four-part AI workshop for my marketing team and he hit it out of the park. No hype, no generic AI 101. He got specific about how each function of the team could use AI in their actual workflows. My team left with tools they could use that day, not just inspiration.',
 't1': "Nir\u2019s expertise significantly enhanced my sales skills and helped overcome numerous sales challenges. Outstanding support!",
 't2': 'Working with Nir was a great experience. He listened attentively, took the time to understand my role, and shared relatable real-world examples. His thought-provoking insights challenged me to view scenarios from new perspectives.',
 't3': "Working with Nir was transformative. His guidance in strategizing, developing, and executing a GTM plan profoundly impacted my role. Nir\u2019s expertise simplified complex strategies into clear, actionable steps.",
@@ -4079,7 +4770,7 @@ he: {
 'svc.cardA.title': 'ייעוץ',
 'svc.cardA.desc': 'פרוייקט בן 3 שלבים בו נאבחן את פערי ה-GTM אצלך, נתכנן שיפורים וניישם אותם ביחד.',
 'svc.cardB.title': '\u05d4\u05e8\u05e6\u05d0\u05d5\u05ea \u05d5\u05e1\u05d3\u05e0\u05d0\u05d5\u05ea',
-'svc.cardB.desc': 'על בסיס קורס MBA בתוכנית היזמות המובילה באקדמיה אשר הותאם למנהלי מוצר, מכירות, שיווק ולקוחות בארגוני B2B.',
+'svc.cardB.desc': 'סדנאות מותאמות ברמת MBA בנושאי יזמות, חדשנות מוצרית ו-GTM בעידן ה-AI.',
 'svc.cardC.title': '\u05de\u05e0\u05d8\u05d5\u05e8\u05d9\u05e0\u05d2',
 'svc.cardC.desc': 'ליווי אישי ליזמים ומנהלים המחפשים שותף לחשיבה ולא פרוייקט ייעוץ.',
 'svc.paneA.title': 'פרוייקט בן 3 שלבים',
@@ -4107,10 +4798,15 @@ he: {
 'svc.paneA.tag3c': 'ליווי אישי למנהלים',
 'svc.paneA.cta': 'עוד פרטים',
 'svc.paneB.title': 'הרצאות וסדנאות',
-'svc.paneB.intro': '',
-'svc.paneB.curr1.title': '\u05d0\u05e1\u05d8\u05e8\u05d8\u05d2\u05d9\u05d5\u05ea \u05db\u05e0\u05d9\u05e1\u05d4 \u05dc\u05e9\u05d5\u05e7 B2B',
+'svc.paneB.intro': 'סדנאות מותאמות ברמת MBA בנושאי יזמות, חדשנות מוצרית ו-GTM בעידן ה-AI.',
+'svc.paneB.flagship.kicker': 'סדנה מותאמת של 20-30 שעות',
+'svc.paneB.flagship.title': 'אסטרטגיה יזמית',
+'svc.paneB.flagship.desc': 'סדנה מלאה ברמת MBA ליזמים וצוותי הנהלה שרוצים לבנות בהירות מוצרית, שוקית ו-GTM בעידן ה-AI.',
+'svc.paneB.moduleLabel': 'מודול',
 'svc.paneB.curr2.title': '\u05d7\u05d3\u05e9\u05e0\u05d5\u05ea \u05de\u05d5\u05e6\u05e8 \u05de\u05d1\u05d5\u05e1\u05e1\u05ea AI',
-'svc.paneB.curr3.title': 'חשיבה יזמית למנהלים',
+'svc.paneB.curr2.desc': 'להפוך את ה-AI ממילת באזז לכלי מעשי לגילוי מוצרי, ניסויים והאצת מפת הדרכים.',
+'svc.paneB.curr3.title': 'AI ב-GTM',
+'svc.paneB.curr3.desc': 'מיפוי המקומות שבהם AI יכול לחדד מיצוב, סגמנטציה, תוכן, תהליכי מכירה והחלטות צמיחה.',
 'svc.paneB.cta': 'לעוד פרטים והזמנה',
 'svc.paneB.ctaSub': '\u05d1\u05e7\u05e9 \u05d0\u05ea ה-PDF \u05d4\u05de\u05dc\u05d0 \u05e9\u05dc \u05ea\u05db\u05e0\u05d9\u05ea \u05d4\u05dc\u05d9\u05de\u05d5\u05d3\u05d9\u05dd',
 'svc.paneC.title': '\u05de\u05e0\u05d8\u05d5\u05e8\u05d9\u05e0\u05d2',
@@ -4121,6 +4817,8 @@ he: {
 'svc.paneC.ctaSub': '\u05e4\u05d2\u05d9\u05e9\u05ea \u05d4\u05d9\u05db\u05e8\u05d5\u05ea \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05e9\u05dc 30 \u05d3\u05e7\u05d5\u05ea',
 'rep.label': '\u05d4\u05de\u05dc\u05e6\u05d5\u05ea',
 'rep.title': '\u05de\u05d4 \u05d0\u05d5\u05de\u05e8\u05d9\u05dd \u05e2\u05dc\u05d9',
+'tFeatured': '\u05ea\u05d5\u05e6\u05d0\u05ea \u05e1\u05d3\u05e0\u05d4 \u05e0\u05d1\u05d7\u05e8\u05ea',
+'t0': '\u05e0\u05d9\u05e8 \u05d4\u05e2\u05d1\u05d9\u05e8 \u05e1\u05d3\u05e0\u05ea AI \u05d1\u05ea \u05d0\u05e8\u05d1\u05e2\u05d4 \u05d7\u05dc\u05e7\u05d9\u05dd \u05dc\u05e6\u05d5\u05d5\u05ea \u05d4\u05e9\u05d9\u05d5\u05d5\u05e7 \u05e9\u05dc\u05d9, \u05d5\u05d4\u05d5\u05d0 \u05e4\u05d2\u05e2 \u05d1\u05d5\u05dc. \u05d1\u05dc\u05d9 \u05d4\u05d9\u05d9\u05e4, \u05d1\u05dc\u05d9 AI 101 \u05d2\u05e0\u05e8\u05d9. \u05d4\u05d5\u05d0 \u05e0\u05db\u05e0\u05e1 \u05dc\u05e4\u05e8\u05d8\u05d9\u05dd \u05e2\u05dc \u05d4\u05d0\u05d5\u05e4\u05df \u05e9\u05d1\u05d5 \u05db\u05dc \u05e4\u05d5\u05e0\u05e7\u05e6\u05d9\u05d4 \u05d1\u05e6\u05d5\u05d5\u05ea \u05d9\u05db\u05d5\u05dc\u05d4 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1-AI \u05d1\u05ea\u05d4\u05dc\u05d9\u05db\u05d9 \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 \u05d4\u05d0\u05de\u05d9\u05ea\u05d9\u05d9\u05dd \u05e9\u05dc\u05d4. \u05d4\u05e6\u05d5\u05d5\u05ea \u05e9\u05dc\u05d9 \u05d9\u05e6\u05d0 \u05e2\u05dd \u05db\u05dc\u05d9\u05dd \u05e9\u05d4\u05dd \u05d9\u05db\u05dc\u05d5 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d4\u05dd \u05db\u05d1\u05e8 \u05d1\u05d0\u05d5\u05ea\u05d5 \u05d9\u05d5\u05dd, \u05dc\u05d0 \u05e8\u05e7 \u05d4\u05e9\u05e8\u05d0\u05d4.',
 't1': 'ניר שדרג משמעותית את יכולות המכירה שלי ועזר לי לגבור בהצלחה על אתגרי מכירה רבים. תמיכה ברמה יוצאת דופן!',
 't2': 'העבודה עם ניר הייתה חוויה מצוינת. הוא הקדיש זמן להבין לעומק את אתגרי ושיתף בדוגמאות מעשיות ורלוונטיות מהשטח. התובנות שלו עזרו לי לבחון סיטואציות מזוויות חדשות.',
 't3': 'העבודה עם ניר הייתה נקודת מפנה עבורי. ניר ידע לפשט אסטרטגיות מורכבות לצעדים ברורים וישימים. ההכוונה שלו בבניית אסטרטגיית GTM השפיעה עמוקות על תפקידי ועל הצלחת המוצרים שבאחריותי.',
@@ -4147,12 +4845,54 @@ he: {
 'footer.copy': '© Nir Maor, 2026'
 }
 };
+var SEO_META = {
+en: {
+title: 'Nir Maor | B2B Product Innovation & GTM Advisor',
+description: 'B2B product innovation and GTM advisor, workshop facilitator and MBA lecturer helping companies build market-entry and growth strategies in the AI era.',
+ogTitle: 'Nir Maor | B2B Product Innovation & GTM Advisor',
+ogDescription: 'B2B product innovation and GTM advisory, workshops and mentoring from a 4-time startup CMO and MBA lecturer.',
+locale: 'en_US',
+alternateLocale: 'he_IL',
+url: 'https://www.nirmaor.com/'
+},
+he: {
+title: 'ניר מאור | ייעוץ לחדשנות מוצר ואסטרטגיית GTM',
+description: 'ייעוץ, ליווי וסדנאות לחברות B2B בתחומי חדשנות מוצר, אסטרטגיית GTM וצמיחה בעידן ה-AI. ניר מאור, סמנכ״ל שיווק לשעבר ומרצה ל-MBA.',
+ogTitle: 'ניר מאור | חדשנות מוצר ואסטרטגיית GTM',
+ogDescription: 'ייעוץ, סדנאות וליווי לחברות B2B בתחומי חדשנות מוצר, GTM וצמיחה בעידן ה-AI.',
+locale: 'he_IL',
+alternateLocale: 'en_US',
+url: 'https://www.nirmaor.com/?lang=he'
+}
+};
+function setMetaContent(selector, value) {
+var el = document.querySelector(selector);
+if (el) el.setAttribute('content', value);
+}
 window.toggleLang = function () { window.setLang(currentLang === 'en' ? 'he' : 'en'); };
 window.setLang = function (lang) {
 currentLang = lang;
 var html = document.documentElement;
 html.lang = lang;
 html.dir = (lang === 'he') ? 'rtl' : 'ltr';
+var seo = SEO_META[lang];
+document.title = seo.title;
+setMetaContent('meta[name="description"]', seo.description);
+setMetaContent('meta[property="og:title"]', seo.ogTitle);
+setMetaContent('meta[property="og:description"]', seo.ogDescription);
+setMetaContent('meta[property="og:url"]', seo.url);
+setMetaContent('meta[property="og:locale"]', seo.locale);
+setMetaContent('meta[property="og:locale:alternate"]', seo.alternateLocale);
+setMetaContent('meta[name="twitter:title"]', seo.ogTitle);
+setMetaContent('meta[name="twitter:description"]', seo.ogDescription);
+var canonical = document.querySelector('link[rel="canonical"]');
+if (canonical) canonical.href = seo.url;
+try {
+var pageUrl = new URL(window.location.href);
+if (lang === 'he') pageUrl.searchParams.set('lang', 'he');
+else pageUrl.searchParams.delete('lang');
+history.replaceState(null, '', pageUrl);
+} catch (e) { }
 document.querySelectorAll('[data-i18n]').forEach(function (el) {
 var key = el.getAttribute('data-i18n');
 if (TRANSLATIONS[lang][key] !== undefined) el.textContent = TRANSLATIONS[lang][key];
@@ -4174,7 +4914,7 @@ try { localStorage.setItem('lang', lang); } catch (e) { }
 (function () {
 var urlLang = new URLSearchParams(window.location.search).get('lang');
 var saved; try { saved = localStorage.getItem('lang'); } catch (e) { }
-if ((urlLang || saved) === 'he') window.setLang('he');
+window.setLang((urlLang || saved) === 'he' ? 'he' : 'en');
 })();
 /* ── FRAMEWORK: toggle on click/tap (closes on re-tap) ── */
 function updateFwTapHints() {
